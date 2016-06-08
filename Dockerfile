@@ -16,8 +16,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates
     && apt-get install -y nodejs \
     && git clone https://github.com/zeromq/libzmq \
     && cd libzmq \
-    && ./autogen.sh && ./configure && make && make install && ldconfig && cd / \
-    && npm install zmq 
+    && ./autogen.sh && ./configure && make && make install && ldconfig && cd /root/testapps/ \
+    && npm install zmq \
+    && mkdir -p /root/testapps/
+    && git clone https://github.com/jimbojw/node-zmq-talk.git
 
 COPY dotbashrc /root/.bashrc
 COPY welcome.ascii /etc/
