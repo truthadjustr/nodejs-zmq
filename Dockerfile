@@ -4,6 +4,7 @@ LABEL description="nodejs 5.x and zmq support because nodejs 6.x has nan error"
 
 RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates \
     build-essential \
+    net-tools \
     wget \
     curl \
     git \
