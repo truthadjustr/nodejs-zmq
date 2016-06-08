@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates
     && cd libzmq \
     && mkdir -p /root/testapps/zmq/ \
     && mkdir -p /root/testapps/rabbitmq/client/ \
-    && ./autogen.sh && ./configure && make && make install && ldconfig && cd /root/testapps/ \
+    && ./autogen.sh && ./configure && make && make install && ldconfig && cd / \
     && npm install zmq \
     && npm install amqplib \
     && git clone https://github.com/jimbojw/node-zmq-talk.git /root/testapps/zmq/node-zmq-talk/ \
