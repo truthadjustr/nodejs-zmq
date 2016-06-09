@@ -24,6 +24,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates
     && mkdir -p /root/testapps/rabbitmq/client/ \
     && ./autogen.sh && ./configure && make && make install && ldconfig && cd / \
     && npm install zmq \
+    && pip install zmq \
+    && pip install pika \
     && npm install amqplib \
     && git clone https://github.com/jimbojw/node-zmq-talk.git /root/testapps/zmq/node-zmq-talk/ \
     && wget https://gist.githubusercontent.com/carlhoerberg/006b01ac17a0a94859ba/raw/907252549bf711ffa16a05bb8b7f2bdf2937e7f2/reconnect.js -O /root/testapps/rabbitmq/client/reconnect.js
