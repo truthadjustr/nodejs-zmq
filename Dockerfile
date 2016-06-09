@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates
     python \
     tmux \
     vim-tiny \
+    python-pip \
     && curl -sL https://deb.nodesource.com/setup_5.x | bash - \
     && apt-get install -y nodejs \
     && git clone https://github.com/zeromq/libzmq \
