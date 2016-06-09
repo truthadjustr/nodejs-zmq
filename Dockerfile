@@ -31,4 +31,5 @@ RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates
     && wget https://gist.githubusercontent.com/carlhoerberg/006b01ac17a0a94859ba/raw/907252549bf711ffa16a05bb8b7f2bdf2937e7f2/reconnect.js -O /root/testapps/rabbitmq/client/reconnect.js
 
 COPY dotbashrc /root/.bashrc
+COPY dottmux.conf /root/.tmux.conf
 COPY welcome.ascii /etc/
