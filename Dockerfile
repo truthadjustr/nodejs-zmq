@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates
     vim-tiny \
     python-pip \
     tcpdump \
-    setuptools \
+    python-setuptools \
     && curl -sL https://deb.nodesource.com/setup_5.x | bash - \
     && apt-get install -y nodejs \
     && git clone https://github.com/zeromq/libzmq \
